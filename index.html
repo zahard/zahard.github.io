@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SIZO</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <a class="logo" href="#">
+                <img src="logo.png"/>
+            </a>
+            <ul>
+                <li class="active" ><a>Головна</a></li>
+                <li><a>Новини</a></li>
+                <li><a>Статті</a></li>
+                <li><a>Іконографіка</a></li>
+            </ul> 
+
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Знайти справу або фігуранта" />
+            </div>
+        </div>
+    </header>
+
+
+        <div class="filters">
+
+            <div class="type-switch">
+                <div class="type-case active">СПРАВИ</div>
+                <div class="type-person">ОСОБИ</div>
+            </div>
+        </div>
+
+    <div class="content wrap"> 
+        <div class="case">
+            <div class="case-caption">
+                <img class="case-image" src="img.jpg"/>
+                <div class="case-overlay"></div>
+                <a href="javascript:void(0)" class="case-title">Справа неповаги до Геннадия Адольфовича</a>
+            </div>
+
+            <div class="case-info">
+                <div class="case-update">
+                    <div class="case-time">Оновлено 13 бер 2017</div>
+                    <div class="case-num">СТ. 263 ККУ</div>
+                </div>
+
+                <div class="case-descr">
+                    <i>Звинувачення:</i> сомнение в лудшем мэре всего мира и вселенной
+                </div>
+
+                <div class="faces-wrap">
+                    <div class="faces-title">Основнi фiгуранти:</div>
+                    <div class="faces">
+                        <div class="face">
+                            <img src="f1.jpg"/>
+                        </div>
+                        <div class="face">
+                            <img src="f2.jpg"/>
+                        </div>
+                        <div class="faces-more">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="faces-separator"></div>
+                <div class="captured-wrap">
+                    <div class="faces-title">Затримано:</div>
+                    <div class="captured-num">2</div>
+                </div>
+
+            </div>
+
+            <div class="case-status ">СУДОВЕ ПРОВАДЖЕННЯ</div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        var dilo = document.querySelector('.case');
+        var content = document.querySelector('.content');
+
+        for (var i=0; i<12;i++) {
+            var newDilo = dilo.cloneNode(true);
+            if(i%4==0)  {
+                newDilo.className = 'case firstInRow';
+            }
+            content.appendChild(newDilo);
+
+        }
+
+        content.removeChild(dilo);
+
+    </script>
+
+</body>
+</html>
+
