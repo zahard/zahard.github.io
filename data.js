@@ -6,5 +6,5 @@
   {"id":10, "name":"Volodymir"},
   {"id":9, "name":"Inna"},
   {"id":8, "name":"Fedor"},
-  {"id":7, "name":"Taras"},
+  {"id":7, "name":"Taras"}
 ]}
